@@ -1,0 +1,31 @@
+.main{
+  max-width: 836px;
+  margin: auto; 
+  margin-top: 34px !important;
+}
+hr{ 
+    background: black;  
+    margin-left: 12px;
+    margin-right: 15px;
+    border: 1.1px solid rgb(57, 55, 55);
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(18, 175, 248); 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #14f8f0; 
+}

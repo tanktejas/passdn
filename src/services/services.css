@@ -1,0 +1,90 @@
+.services{
+    margin-left: 12px;
+    margin-right: 15px;
+}
+.allservices{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.allservices .os{
+    /* width: 25%; */
+    border: 1px solid black;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    margin: 14px;
+}
+ 
+.os div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    border-radius: 0px 0px 10px 10px;
+    color: white;
+    background: #0048B3;
+}
+.allservices .os img{
+    width: 59%;
+    height: 70%;
+}
+.allservices{
+    margin-top: 23px;
+}
+.os div p{
+    font-size: 1.5rem;
+    padding: 0px;
+    margin: 0px;
+  
+}
+
+@media (max-width:671px) {
+    .os div p{
+        font-size: 1.0rem;
+    }
+}
+.bott{
+    margin-top:18px ;
+   display: flex;
+   justify-content: center;
+}
+.bott .botline{
+    width: 50%;
+}
+
+@media (min-width:451px) {
+    .allservices .os {
+        width: 17%;
+       
+    }
+}
+
+@media (max-width:450px) {
+    .os div p {
+        font-size: 0.76rem;
+    }
+    .allservices .os {
+        width: 21%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 4px;
+        margin: 4px;
+    }
+    .os {
+        border-radius: 5px;
+    }
+    .os div{
+        border-radius: 0px 0px 5px 5px;
+    }
+}
+
+@media (max-width:380px) {
+    .services h2{
+        font-size: 20px;
+    }
+}
