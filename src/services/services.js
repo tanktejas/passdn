@@ -9,6 +9,7 @@ import { db } from "../DB/salooncrm";
 import { query, orderBy, onSnapshot } from "firebase/firestore";
 import { collection, addDoc, Timestamp } from "firebase/firestore";
 
+import ReactLoading from "react-loading";
 import { useParams } from "react-router-dom";
 
 function Services(props) {
@@ -57,7 +58,15 @@ function Services(props) {
   ) {
     return (
       <>
-        <h1>Loading ....</h1>
+        <div className="load">
+          <ReactLoading
+            className="loadbar"
+            type="spokes"
+            color="#0000FF"
+            height={100}
+            width={50}
+          />
+        </div>
       </>
     );
   }

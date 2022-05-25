@@ -5,7 +5,7 @@ import serviceslogo from "../images/hair-cut.png";
 
 function Line({ fstle, sets, service, setservice, serr, barberservices }) {
   const [barbservices, setser] = useState([]);
-  
+
   useEffect(() => {
     let arr = [];
     for (let item in barberservices) {
@@ -44,10 +44,16 @@ function Line({ fstle, sets, service, setservice, serr, barberservices }) {
                     document.getElementById(
                       barbservices[item.id]
                     ).style.border = "1px solid black";
+                    document.getElementById(
+                      barbservices[item.id]
+                    ).style.boxShadow = "none";
                   } else {
                     document.getElementById(
                       barbservices[item.id]
                     ).style.border = "2.4px solid blue";
+                    document.getElementById(
+                      barbservices[item.id]
+                    ).style.boxShadow = "2px 2px 10px #9d9ddb";
                   }
 
                   let curr = fstle;
