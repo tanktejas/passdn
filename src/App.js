@@ -10,8 +10,6 @@ import { db } from "./DB/salooncrm";
 
 import { query, orderBy, onSnapshot } from "firebase/firestore";
 import { collection, addDoc, Timestamp } from "firebase/firestore";
-import SweetAlert from "sweetalert-react";
-import swal from "sweetalert";
 
 import { useParams } from "react-router-dom";
 
@@ -54,13 +52,14 @@ function App() {
             seen: false,
             services: objtosend,
             timestamp: Date.now().toString(),
+          }).then(() => {
+            window.location.reload();
           });
-          console.log(add);
         } catch (err) {
           alert("Some error occured try again.");
         }
       }
-      alert("Your order has been succesfully added.");
+      alert("Your order has been successfully taken.");
       fun();
     }
   }
