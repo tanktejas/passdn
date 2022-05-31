@@ -32,7 +32,10 @@
     border-radius: 10px;
     margin: 14px;
 }
- 
+.os img{
+    color: black !important;
+    /* background-color: black !important; */
+}
 .os div {
     width: 100%;
     height: 100%;

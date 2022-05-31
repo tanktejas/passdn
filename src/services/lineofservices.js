@@ -1,8 +1,16 @@
 import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
-import serviceslogo from "../images/hair-cut.png";
+// import serviceslogo from "../images/hair-cut.png";
+import hairwash from "../images/services/Hair wash.png";
+import haircut from "../images/services/Hair cut.png";
+import beard from "../images/services/Beard Trim.png"; 
+import moustache from "../images/services/Moustache.png";
+import shapeup from "../images/services/Shape Up.png";
+import shave from "../images/services/Shave.png";
+import massage from "../images/services/Massage.png";
 
+import Ss from "../images/services/Sp. Hair Cut.png";
 function Line({ fstle, sets, service, setservice, serr, barberservices }) {
   const [barbservices, setser] = useState([]);
 
@@ -21,6 +29,16 @@ function Line({ fstle, sets, service, setservice, serr, barberservices }) {
         {/* using map method */}
 
         {fstle.map((item) => {
+          {
+            /* console.log(barbservices[item.id]); */
+          }
+          {
+            /* const imgurl = `../images/services/${barbservices[item.id]}.png`; */
+          }
+          const uu = "../images/services/Hair wash.png";
+          {
+            /* console.log(imgurl); */
+          }
           return (
             <>
               <div
@@ -65,7 +83,32 @@ function Line({ fstle, sets, service, setservice, serr, barberservices }) {
                   sets(curr);
                 }}
               >
-                <img src={serviceslogo}></img>
+                {barbservices[item.id] == "Hair cut" && (
+                  <img src={haircut}></img>
+                )}
+                {barbservices[item.id] == "Hair wash" && (
+                  <img src={hairwash}></img>
+                )}
+                {barbservices[item.id] == "Beard Trim" && (
+                  <img src={beard}></img>
+                )}
+                {barbservices[item.id] == "Moustache" && (
+                  <img src={moustache}></img>
+                )}
+                {barbservices[item.id] == "Shape Up" && (
+                  <img src={shapeup}></img>
+                )}
+                {barbservices[item.id] == "Shave" && <img src={shave}></img>}
+
+                {barbservices[item.id] == "Sp. Hair Cut" && (
+                  <img src={haircut}></img>
+                )}
+                {barbservices[item.id] == "Sp. Shave" && (
+                  <img src={shave}></img>
+                )}
+                {barbservices[item.id] == "Massage" && (
+                  <img src={massage}></img>
+                )}
                 <div>
                   <p>{barbservices[item.id]}</p>
                 </div>

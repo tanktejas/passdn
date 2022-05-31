@@ -30,11 +30,13 @@ function Services(props) {
       querySnapshot.docs.map((doc) => {
         if (doc.id == barberid) {
           setTasks(doc.data().myservices);
+          console.log(doc.data());
           let a = Object.keys(doc.data().myservices).length;
           settot(a);
           setss(true);
         }
       });
+  
     });
 
     if (barberservicesavailable != {}) {
