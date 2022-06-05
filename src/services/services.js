@@ -25,18 +25,17 @@ function Services(props) {
     //barber id will be fetched from url.
     const barberid = barberuniqid;
 
-    const q = query(collection(db, "services"));
+    const q = query(collection(db, "profile"));
     onSnapshot(q, (querySnapshot) => {
       querySnapshot.docs.map((doc) => {
         if (doc.id == barberid) {
-          setTasks(doc.data().myservices);
+          setTasks(doc.data().services);
           console.log(doc.data());
-          let a = Object.keys(doc.data().myservices).length;
+          let a = Object.keys(doc.data().services).length;
           settot(a);
           setss(true);
         }
       });
-  
     });
 
     if (barberservicesavailable != {}) {

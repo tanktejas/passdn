@@ -3,6 +3,9 @@
     justify-content: space-between;
     align-items: center;
 }
+.right h3{
+    color: rgb(34, 71, 233);
+}
 .nav div{
     padding: 4px;
 }
