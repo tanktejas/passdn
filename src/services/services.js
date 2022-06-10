@@ -28,10 +28,11 @@ function Services(props) {
     const q = query(collection(db, "profile"));
     onSnapshot(q, (querySnapshot) => {
       querySnapshot.docs.map((doc) => {
+        // console.log(doc.data());
         if (doc.id == barberid) {
-          setTasks(doc.data().services);
+          setTasks(doc.data().myservices);
           console.log(doc.data());
-          let a = Object.keys(doc.data().services).length;
+          let a = Object.keys(doc.data().myservices).length;
           settot(a);
           setss(true);
         }
