@@ -22,8 +22,8 @@ function Navbar() {
     onSnapshot(q, (querySnapshot) => {
       querySnapshot.docs.map((doc) => {
         if (doc.id == barberid) {
-          setpro(doc.data().ShopProfile);
-          console.log(doc.data().ShopProfile);
+          setpro(doc.data().shopImage);
+          console.log(doc.data().shopImage);
           setss(true);
         }
       });
@@ -45,11 +45,13 @@ function Navbar() {
       </>
     );
   }
+
+  console.log(profilepic);
   return (
     <>
       <div className="nav">
         <div className="left">
-          <img src={logo} />
+          <img src={profilepic == "" ? logo : profilepic} />
         </div>
         <div className="right">
           <h2>Welcome to,</h2>
