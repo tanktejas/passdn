@@ -51,7 +51,7 @@ function Navbar() {
     <>
       <div className="nav">
         <div className="left">
-          <img src={profilepic == "" ? logo : profilepic} />
+          <img src={profilepic == undefined ? logo : profilepic} />
         </div>
         <div className="right">
           <h2>Welcome to,</h2>
